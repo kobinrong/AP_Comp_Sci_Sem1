@@ -13,8 +13,14 @@ public class Lesson_02
 		String City = "My City";
 		String Zip = "12345";
 		
-		System.out.println(Name + "\n" +  Address + "," + " " + My City + " " + Zip);
+		System.out.println(Name + "\n" +  Address + "," + " " + My City + " " + Zip)
 		
+		int l = 4;
+		int w = 5;
+		int h = 6;
+		int Area =(2 * l * w)+(2 * l * h)+(2 * w * h);
+		
+		System.out.println("The surface area of your rectangle is"+" "+Area);
 
 	}
 }
