@@ -13,7 +13,7 @@ public class Lesson_02
 		String City = "My City";
 		String Zip = "12345";
 		
-		System.out.println(Name + "\n" +  Address + "," + " " + My City + " " + Zip)
+		System.out.println(Name + "\n" +  Address + "," + " " + City + " " + Zip);
 		
 		int l = 4;
 		int w = 5;
