@@ -39,12 +39,14 @@ public class ReceiptProgram
 		form.format("Subtotal:",subtotal);
 		form.format("Tax:",tax);
 		form.format("Total:",total);
+		System.out.println("_________________________________________");
+		System.out.println("* Thank you for your support *");
 		
 	}
 	
-	public void format(String item, double price);
+	public void format(String item, double price)
 	{
 	
-		System.out.printf("* %10s ........ %10.2f\n", String.class, double.class);
+		System.out.printf("* %10s ........ %10.2f\n", item, price);
 	}
 }
