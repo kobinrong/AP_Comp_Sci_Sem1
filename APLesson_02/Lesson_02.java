@@ -11,9 +11,10 @@ public class Lesson_02
 		String Name = "Kobin Rong";
 		String Address = "1010 A Street";
 		String City = "My City";
-		String Zip = "12345";
+		String State = "CA";
+		int Zip = 92130;
 		
-		System.out.println(Name + "\n" +  Address + "," + " " + City + " " + Zip);
+		System.out.println(Name + "\n" +  Address + "\n" + City + "," + " " + State + " " +	Zip);
 		
 		int l = 4;
 		int w = 5;
