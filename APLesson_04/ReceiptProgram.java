@@ -4,14 +4,14 @@ public class ReceiptProgram
 {
 	public static void main(String[]args)
 	{
-		ReceiptProgram form = new ReceiptProgram();
+		ReceiptProgram form = new ReceiptProgram(); //the object 
 		
 		Scanner keyboard = new Scanner(System.in);
 		//prompt user input 
 		System.out.println("Please enter item 1");
 		String item1 = keyboard.next();
 		//prompt user input 
-		System.out.println("Please enter price for item 1")
+		System.out.println("Please enter price for item 1");
 		double price1 = keyboard.nextDouble();
 		//prompt user input
 		System.out.println("Please enter item 2");
@@ -26,5 +26,25 @@ public class ReceiptProgram
 		System.out.println("Please enter price for item 3");
 		double price3 = keyboard.nextDouble();
 		
+		
+		double subtotal = price1 + price2 + price3;
+		double tax = .08 * subtotal; 
+		double total = tax + subtotal;
+		
+		System.out.println("<<<<<<<<<<<<<<<__Receipt___>>>>>>>>>>>>>>>");
+		form.format(item1,price1);
+		form.format(item2, price2);
+		form.format(item3,price3);
+		System.out.println("\n\n");
+		form.format("Subtotal:",subtotal);
+		form.format("Tax:",tax);
+		form.format("Total:",total);
+		
+	}
+	
+	public void format(String item, double price);
+	{
+	
+		System.out.printf("* %10s ........ %10.2f\n", String.class, double.class);
 	}
 }
