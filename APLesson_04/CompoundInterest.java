@@ -9,17 +9,17 @@ public class CompoundInterest
 		
 		
 		System.out.println("Please enter the interest rate.");
-		double r = keyboard.NextDouble();
+		double r = keyboard.nextDouble();
 		System.out.println("Please enter the original amount you intend to borrow.");
-		double P = keyboard.NextDouble();
+		double P = keyboard.nextDouble();
 		System.out.println("Please enter the number of times the loan is compounded per year.");
-		double n = keyboard.NextDouble();
+		double n = keyboard.nextDouble();
 		System.out.println("Please enter the number of years for which the loan's interest is calculated.");
-		double t = keyboard.NextDouble();
+		double t = keyboard.nextDouble();
 		
 		double avg = payment.loan(r,P,n,t);
 		
-		System.out.println("Your total monthly payment is" + avg);
+		System.out.printf("Your total monthly payment is%10.2f", avg);
 		
 	}
 	public double loan(double r, double P, double n, double t)
