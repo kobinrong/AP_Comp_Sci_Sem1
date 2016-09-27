@@ -7,26 +7,26 @@ public class IDCardMaker
 		IDCardMaker form = new IDCardMaker();
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Enter your first name:");
-		String firstname = keyboard.next();
+		String firstname = keyboard.nextLine();
 		System.out.println("Enter your last name");
-		String lastname = keyboard.next();
+		String lastname = keyboard.nextLine();
 		System.out.println("Enter your title:");
-		String title = keyboard.next();
+		String title = keyboard.nextLine();
 		System.out.println("Enter the school site:");
-		String school = keyboard.next();
+		String school = keyboard.nextLine();
 		System.out.println("Enter the school year:");
-		String year = keyboard.next();
+		String year = keyboard.nextLine();
 		System.out.println("What is your subject?");
-		String subject = keyboard.next();
+		String subject = keyboard.nextLine();
 		
-		System.out.println("*************************");
+		System.out.println("************************************");
 		form.format(school, year);
 		form.format(firstname, lastname);
 		form.format(title, subject);
-		System.out.println("*************************");
+		System.out.println("************************************");
 	}	
 	public void format(String obj1, String obj2)
 	{
-		System.out.printf("* %10s%10s *", obj1, obj2);
+		System.out.printf("* %12s%20s *\n", obj1, obj2);
 	}
 }
