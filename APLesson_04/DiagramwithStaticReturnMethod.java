@@ -11,7 +11,8 @@ public static void main(String[]args)
 	int w = keyboard.nextInt();
 	print(calcArea(l,w));
 	
-	
+	// print();
+	//calcArea();
 	
 	
 	
