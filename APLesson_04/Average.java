@@ -1,23 +1,23 @@
 import java.util.Scanner;
 public class Average
 {
-	static int num1;
-	static int num2;
-	static int num3;
+	static double num1;
+	static double num2;
+	static double num3;
 	static double avg;
 
 	public static void main(String[]args)
 	{
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Please enter the first integer");
-		int num1 = keyboard.nextInt();
+		 num1 = keyboard.nextInt();
 		System.out.println("Please enter the second integer.");
-		int num2 = keyboard.nextInt();
+		 num2 = keyboard.nextInt();
 		System.out.println("Please enter the third integer.");
-		int num3 = keyboard.nextInt();
-		
-		print();
+		 num3 = keyboard.nextInt();
 		average();
+		print();
+		
 		
 		
 		
@@ -30,6 +30,6 @@ public class Average
 	
 	public static void print()
 	{
-		System.out.println("The average of" + " " + num1 + "," + " " + num2 + "," + " " + num3 + "," + " " + "is" + " " + avg);
+		System.out.printf("The average of %.2f, %.2f, and %.2f is %.5f", num1, num2, num3, avg);
 	}	
 }

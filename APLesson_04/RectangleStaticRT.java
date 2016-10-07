@@ -15,13 +15,13 @@ public class RectangleStaticRT
 		
 	}
 	
-	public static int CalcPerim(int l, int w)
+	public static double CalcPerim(int l, int w)
 	{
 		return ((2 * l) + (2 * w));
 	}
 	
-public static void print(int perimeter)
+public static void print(double perimeter)
 	{
-		System.out.println("The perimeter of your rectangle is" + " " + perimeter);
+		System.out.printf("The perimeter of your rectangle is %.5f",perimeter);
 	}	
 }

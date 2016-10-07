@@ -3,26 +3,26 @@ public class CircleRT
 {
 
 
-	public static int main(String[]args)
+	public static void main(String[]args)
 	{
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Please enter the length of the radius of your circle.");
-		int r = keyboard.nextInt();
+		double r = keyboard.nextDouble();
 
-		print(calcArea(r));
+		print( r, calcArea(r));
 
 		
 		
 		
 	}
 	
-	public static void calcArea(int r)
+	public static double calcArea(double r)
 	{
 		return 3.14 * r * r ;
 	}
 	
-	public static void print(double area)
+	public static void print(double r, double area)
 	{
-		System.out.println("The area of a circle with a radius of" + " " + r + " " + " is " + " " + area);
+		System.out.printf("The area of a circle with a radius of %.2f is %.5f", r, area);
 	}	
 }

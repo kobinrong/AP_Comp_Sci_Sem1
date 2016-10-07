@@ -13,7 +13,8 @@ public class AverageRT
 		System.out.println("Please enter the third integer.");
 		int num3 = keyboard.nextInt();
 		
-		print(average(num1, num2, num3));
+		
+		print(num1, num2, num3, average(num1, num2, num3));
 		
 		
 		
@@ -24,8 +25,8 @@ public class AverageRT
 		return ((num1 + num2 + num3) / 3);
 	}
 	
-	public static void print(int average)
+	public static void print(double num1, double num2, double num3, double average)
 	{
-		System.out.println("The average of" + " " + num1 + "," + " " + num2 + "," + " " + num3 + "," + " " + "is" + " " + average);
+		System.out.printf("The average of %.2f, %.2f, and %.2f is %.5f", num1, num2, num3, average);
 	}	
 }

@@ -3,26 +3,26 @@ public class CubeRT
 {
 
 
-	public static int main(String[]args)
+	public static void main(String[]args)
 	{
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Please enter the length of the side of your cube");
 		int side = keyboard.nextInt();
 
-		print(calcSurf(side));
+		print(side, calcSurf(side));
 		
 		
 		
 		
 	}
 	
-	public static void calcSurf(int side)
+	public static int calcSurf(int side)
 	{
 		return 6 * side * side ; 
 	}
 	
-	public static void print(int sa)
+	public static void print(double side, double sa)
 	{
-		System.out.println("The surface area of a cube whose sides are" + " " + side + " " + "in length is " + " " + sa);
+		System.out.printf("The surface area of a cube whose sides are %.2f is %.5f", side, sa);
 	}	
 }
