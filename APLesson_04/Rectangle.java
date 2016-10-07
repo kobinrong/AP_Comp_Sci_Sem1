@@ -9,23 +9,23 @@ public class Rectangle
 	{
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Please enter the length of the rectangle.");
-		double  l = keyboard.nextDouble();
+		  l = keyboard.nextDouble();
 		System.out.println("Please enter the width of the rectangle.");
-		double w = keyboard.nextDouble();
-		
-		print();
+		 w = keyboard.nextDouble();
 		calcPerim();
+		print();
+		
 		
 		
 	}
 	
 	public static void calcPerim()
 	{
-		perimeter = ((2 * l) + (2 * w));
+		perimeter = (2 * l) + (2 * w);
 	}
 	
 	public static void print()
 	{
-		System.out.println("The perimeter of your rectangle is" + " " + perimeter);
+		System.out.printf("The perimeter of your rectangle is %.5f", perimeter);
 	}	
 }

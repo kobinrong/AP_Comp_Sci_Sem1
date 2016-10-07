@@ -1,14 +1,14 @@
 import java.util.Scanner;
 public class Cube
 {
-	static int side;
+	static double side;
 	static double sa;
 
 	public static void main(String[]args)
 	{
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Please enter the length of the side of your cube");
-		int side = keyboard.nextInt();
+		side = keyboard.nextDouble();
 
 		print();
 		calcSurf();
@@ -24,6 +24,6 @@ public class Cube
 	
 	public static void print()
 	{
-		System.out.println("The surface area of a cube whose sides are" + " " + side + " " + "in length is " + " " + sa);
+		System.out.printf("The surface area of a cube whose sides are %.2f is %.5f", side,sa);
 	}	
 }
