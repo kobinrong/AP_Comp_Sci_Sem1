@@ -19,7 +19,7 @@ public class Circle
 	
 	public static void calcArea()
 	{
-		area = 3.14 * r * r ;
+		 area = 3.14 * r * r ;
 	}
 	
 	public static void print()

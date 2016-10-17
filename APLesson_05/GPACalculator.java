@@ -9,13 +9,9 @@ public class GPACalculator
 	static String band; 
 	static String compsci;
 	static String physed;
-	static double A;
-	static double B;
-	static double C;
-	static double D;
-	static double F;
-	static double gPoints;
-	static String gpa;
+
+	
+	static double gpa;
 
 
 	public static void main(String[]args)
@@ -45,30 +41,27 @@ public class GPACalculator
 		System.out.println("Enter letter grade for physical education");
 		physed = kb.next();
 		
-		A = 4.0;
-		B = 3.0;
-		C = 2.0;
-		D = 1.0;
-		F = 0.0;
+
 	
-		gPoints = ((calcPoints(math) + calcPoints(english) + calcPoints(history) + calcPoints(biology) + calcPoints(band) + calcPoints(compsci) + calcPoints(physed)) / 7 );
+		gpa = (calcPoints(math) + calcPoints(english) + calcPoints(history) + calcPoints(biology) + calcPoints(band) + calcPoints(compsci) + calcPoints(physed)) / 7;
+		
 		
 		System.out.println("Your GPA is " + gpa);
 		
 		
 	}
 	
-	public static double calcPoints()
+	public static double calcPoints(String gpa)
 	{
 		if(gpa.equals("A"))
-			gPoints = 4.0;
-		if(gpa.equals("B"))
-			gPoints = 3.0;
-		if(gpa.equals("C"))
-			gPoints = 2.0;
-		if(gpa.equals("D"))
-			gPoints = 1.0;
-		if(gpa.equals("F"))
-			gPoints = 0.0;
+			return 4.0;
+		else if(gpa.equals("B"))
+			return 3.0;
+		else if(gpa.equals("C"))
+			return 2.0;
+		else if(gpa.equals("D"))
+			return 1.0;
+		else 
+			return 0.0;
 	}
 }
