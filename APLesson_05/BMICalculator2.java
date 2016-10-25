@@ -4,8 +4,8 @@ public class BMICalculator2
 {
 	static double height;
 	static double weight;
-	static double bmivalue;
-	static String bmi; 
+	static double bmi;
+	static String condition;
 	
 
 
@@ -16,35 +16,34 @@ public class BMICalculator2
 		
 		Scanner kb = new Scanner(System.in);
 		
-		System.out.println("Enter height");
+		System.out.println("Enter height in inches");
 		height = kb.nextDouble();
 		
-		System.out.println("Enter weight");
+		System.out.println("Enter weight in pounds");
 		weight = kb.nextDouble();
 		
 		
 		
-		bmi = (calcCond(weight) / ((CalcCond(height)) * (CalcCond(height)))) * 703;
-		bmivalue = (weight / (height * height)) * 703;
-		System.out.println("Your BMI is " + bmivalue);
-		System.out.println("Your condition is" + bmi);
+		bmi = (weight / (height * height)) * 703;
+		System.out.println("Your BMI is " + bmi);
+		System.out.println("Your condition is" + condition);
 		
 	}
 	//trickle down from greatest to least 
-	public static double calcCond(String bmi)
+	public static void calcCond()
 	{
 		if(bmi > 39.9 )
-			return "Morbidly Obese";
+			condition = "Morbidly Obese";
 		else if (bmi > 35)
-			return "Very Obese";
+			condition = "Very Obese";
 		else if(bmi > 30)
-			return "Obese";
+			condition = "Obese";
 		else if(bmi > 25)
-			return "overweight";
+			condition = "overweight";
 		else if(bmi > 18.5 )
-			return "normal" ;
+			condition = "normal" ;
 		else 
-			return "Underweight";
+			condition = "Underweight";
 		
 
 	}
