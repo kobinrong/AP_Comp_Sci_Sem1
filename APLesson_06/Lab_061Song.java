@@ -2,13 +2,18 @@ public class Lab_061Song
 {
 	public static void main(String[]args)
 	{
-		String na = Na Na Na Na ;
-		String hey = Hey Hey Hey;
-		String bye = Goodbye!;
+		song("Na", 4);
+		song("Na", 4);
+		song("Hey", 3);
+		song("Goodbye!", 1);
 		
-		for(int i = 0; i<= 4; i++)
+	}
+	
+	public static void song(String word, int repeat){
+		for(int i = 1; i <= repeat; i++)
 		{
-			System.println
+			System.out.print(word + " ");
 		}
+		System.out.print("\n");
 	}
 }
