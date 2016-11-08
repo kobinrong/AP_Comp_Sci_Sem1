@@ -17,7 +17,8 @@ public class Lab_07DigitAdder
 	{	int num = number;
 		while(num > 0)
 		{
-			sum += sum + num/10
+			sum +=  (num % 10)
+			
 			;
 			num /= 10;
 		}
