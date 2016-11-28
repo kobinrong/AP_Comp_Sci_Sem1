@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Lab_061LeftTriangle
+public class Lab_061RightTriangle
 {
 	public static void main(String[]args)
 	{
@@ -9,7 +9,7 @@ public class Lab_061LeftTriangle
 
 		for(int i = word.length(); i >= 0; i--)
 		{
-			System.out.println(word.substring(-i));
+			System.out.println(word.substring(i));
 		}
 	}
 }
