@@ -15,6 +15,7 @@ public class Lesson_09
 		//print the array 
 		
 		for(String name : names)
+			
 		{
 			System.out.print("\"" + name.length() + "\", ");
 		}//length is an operation in this case because deals with string  
