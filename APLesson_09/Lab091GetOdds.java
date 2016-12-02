@@ -11,8 +11,7 @@ public class Lab091GetOdds
 		System.out.println("The " + getOdds() + "are odd numbers.");
 		
 		//fillArray();
-		//System.out.println("For the following numbers..." );
-		//printArray();
+		//System.out.println("For the following numbers..." + printArray());
 		//System.out.println("These are the odds: " + getOdds());
 		//why does the above code not work? 
 	}
