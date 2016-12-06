@@ -2,30 +2,28 @@ import java.util.Scanner;
 public class Lab091FindtheZs
 {
 	static String [] words = new String[5];
+	static Scanner kb = new Scanner(System.in);
 	public static void main(String[]args)
 	{
+		System.out.println("Enter your words: ");
 		fillArray();
 		System.out.println("For the words: ");
-		fillArray();
+		printArray();
 		System.out.println("Only " + hasZs() + "contain(s) the letter z.");
 		
 	}
 	
 
-	public static String fillArray()
+	public static void fillArray()
 	{
-
-
-		
 		for(int i = 0; i < words.length; i++)
 		{
-			Scanner kb = new Scanner(System.in);
-			System.out.println("Enter your words: ");
 			words[i] = kb.next();
 		}
+		
 	}
 	
-	public static String printArray()
+	public static void printArray()
 	{
 		for(String print : words)
 		{
@@ -36,14 +34,14 @@ public class Lab091FindtheZs
 	public static String hasZs()
 	{
 		String zs = " ";
+	
 		for(String word : words)
 		{
-			
-			if(word.indexof("z") > 0)
+			if(word.indexOf("z") >= 0)
 			{
 				zs += (word + " ");
 			}
-			return zs;
 		}
+		return zs;
 	}
 }
