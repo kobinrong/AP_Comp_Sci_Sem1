@@ -15,7 +15,7 @@ public class Lab091GetOdds
 		//System.out.println("These are the odds: " + getOdds());
 		//why does the above code not work? 
 	}
-	
+	//why is it void
 	public static void fillArray()
 	{
 		for(int i = 0; i < numbers.length; i++)
