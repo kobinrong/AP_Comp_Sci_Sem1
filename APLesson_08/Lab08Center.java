@@ -9,16 +9,16 @@ public class Lab08Center
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter your first word: ");
 		word1 = kb.next();
-		makeCenter();
+		
 		System.out.println("Please enter your second word: ");
 		word2 = kb.next();
-		makeCenter();
+		
 		System.out.println("Please enter your third word: ");
 		word3 = kb.next();
-		makeCenter();
-		//System.out.println(makeCenter(word1));
-		//System.out.println(makeCenter(word2));
-		//System.out.println(makeCenter(word3));
+		
+		System.out.println(makeCenter(word1));
+		System.out.println(makeCenter(word2));
+		System.out.println(makeCenter(word3));
 	}
 	public static String makeCenter(String word)
 	{
