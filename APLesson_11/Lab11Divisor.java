@@ -32,6 +32,6 @@ public class Lab11Divisor
 			
 		}
 		
-		System.out.println("There are " + count + "numbers divisible by " + divisor + "in the Array");
+		System.out.println("There are " + count + " numbers divisible by " + divisor + " in the Array");
 	}
 }
