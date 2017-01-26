@@ -20,11 +20,11 @@ public class Lab10ExpSolv
 			{
 				if(equation.get(i).equals("*"))
 				{	
-					equation.set(i, " " + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
 				}
 				else 
 				{
-					equation.set(i, " " + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
 				}
 				equation.remove(i-1);
 				equation.remove(i);
@@ -38,11 +38,11 @@ public class Lab10ExpSolv
 			{
 				if(equation.get(i).equals("+"))
 				{	
-					equation.set(i, " " + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
 				}
 				else 
 				{
-					equation.set(i, " " + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
 				}
 				equation.remove(i-1);
 				equation.remove(i);
