@@ -13,11 +13,11 @@ public class Distance2PointsRunner
 	System.out.println("Please enter the y location for your second point");
 	int y2 = kb.nextInt();
 	
-	Distance2PointsRunner algebra = new Distance2PointsRunner(x1, y1, x2, y2);
+	Distance2PointsRunner alg = new Distance2PointsRunner(x1, y1, x2, y2);
 	
-	System.out.println("Distance = " + algebra.getDist());
-	algebra.setValues(x1, y1, x2, y2);
-	System.out.println("Distance = " + algebra.getDist());
+	System.out.println("Distance = " + alg.getDist());
+	alg.setValues(4,5,6,7);
+	System.out.println("Distance = " + alg.getDist());
 	
 	}
 }

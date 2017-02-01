@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Lab11_1GameHealth
 {
-	static String [] health; 
+	static String[] health; 
 	static int healthload = 6;
 	static int healthCount;
 	
@@ -17,21 +17,21 @@ public class Lab11_1GameHealth
 		while(turn != "Q" && healthCount > 0)
 		{
 			System.out.println("Your turn! Hit ENTER when ready: ");
-			turn = kb.next();
-			damage =(int)(Math.random() * 2 + 1);
-			amount = (int)(Math.random() * 6 + 1);
+			turn = kb.nextLine();
+			damage = 1 +(int)(Math.random() * 2);
+			amount = 1 + (int)(Math.random() * 6);
 			System.out.println(takeDamage(damage, amount));
 			printClip();
 		}
 		System.out.println("You died!!");
 	}
 	
-	public static void takeDamage(int damage, int amount)
+	public static String takeDamage(int damage, int amount)
 	{
 		if(damage == 1)
 		{
 			healthCount -= amount;
-			return System.out.println("Taking" + amount + "damage!");
+			return "Taking " + amount + " damage!";
 		}
 		else
 		{
@@ -45,24 +45,26 @@ public class Lab11_1GameHealth
 			}
 			
 		}
-		return System.out.println("Power up" + amount );
+		return "Power up " + amount;
 	}
 	
-	public static void printClip(int damage, int amount)
+	public static void printClip()
 	{
 		String output = "Health:\t";
 		
-		for(int i = 0; i <healthCount; i++) 
+		for(int i = 0; i <healthload; i++) 
 		{
 			if(i < healthCount)
-			{	
+			{
+				
 				health[i] = " @ "; 
 			}			
 			else
 			{
-				health[i] = output;
+				health[i] = " [] "; 
+				
 			}	
-			
+			output += health[i];
 		}
 		System.out.println(output);
 	}

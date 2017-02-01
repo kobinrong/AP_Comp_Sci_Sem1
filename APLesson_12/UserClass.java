@@ -43,10 +43,10 @@ public class UserClass
 		"\nAvatar: " + avatar +
 		"\nUser ID#: " + userID;
 	}
-}
 
-public class UserMain
-{
+
+
+
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
@@ -60,18 +60,19 @@ public class UserMain
 		{
 			System.out.println("Please enter your avatar: ");
 			String avaY = kb.nextLine();
-			UserMain ph = new UserMain(firstname, lastname, avaY);
+			UserClass ph = new UserClass(firstname, lastname, avaY);
 			System.out.println();
 			System.out.println(ph);
 		}
 		if(avaYorN.equalsIgnoreCase("n"))
 		{
 			System.out.println("Thank you.");
-			UserMain ph2 = new UserMain(firstname, lastname);
+			UserClass ph2 = new UserClass(firstname, lastname);
 			System.out.println();
 			System.out.println(ph2);
 		}
 	}
 	
 	
+
 }

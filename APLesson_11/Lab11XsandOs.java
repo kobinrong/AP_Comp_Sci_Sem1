@@ -24,9 +24,9 @@ public class Lab11XsandOs
 			
 		}
 		
-		for(int i = 0; i < words.length; i++)
+		for(int i = 0; i < xAndO.length; i++)
 		{
-			for(int j = 0; j <words[i].length; j++)
+			for(int j = 0; j <xAndO[i].length; j++)
 			{
 				System.out.print(xAndO[i][j] + "\t");
 			}
