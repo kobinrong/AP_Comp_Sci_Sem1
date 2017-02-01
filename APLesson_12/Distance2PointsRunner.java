@@ -13,9 +13,9 @@ public class Distance2PointsRunner
 	System.out.println("Please enter the y location for your second point");
 	int y2 = kb.nextInt();
 	
-	Distance2PointsRunner alg = new Distance2PointsRunner(x1, y1, x2, y2);
-	
+	APLab12_Distance2Points alg = new APLab12_Distance2Points(x1, y1, x2, y2);
 	System.out.println("Distance = " + alg.getDist());
+	
 	alg.setValues(4,5,6,7);
 	System.out.println("Distance = " + alg.getDist());
 	
