@@ -11,7 +11,7 @@ public class ToyStore
 		{
 			String name = toys.get(i);
 			String type = toys.get(i +1);
-			Toy ty = getThatToy(name);
+			
 			
 			if(getThatToy(name) == null)
 			{
@@ -28,8 +28,8 @@ public class ToyStore
 			}
 			else
 			{
-				
-				ty.setCount((ty.getCount)+1);
+				Toy ty = getThatToy(name);
+				ty.setCount((ty.getCount())+1);
 			}
 		}	
 	}
