@@ -1,24 +1,24 @@
-public class Lesson13
+public class Bill extends Money
 {
-	private String name; 
-	private double weight, value;
+ 
+	private String face; 
 	
 	public Bill()
 	{
-		name = "";
+		super();
 		face = "";
-		value = 0;
+	
 	}
 	
 	public Bill(String n, String f, double v)
 	{
-		name = n; 
+		super(n, v);
 		face = f;
-		value = v;
 	}
 	
 	public String toString()
 	{
-		return "Your" + name " is worth $ " + value + ".\n";
+		return "Face: " + face  + "\n" +
+			super.toString();
 	}
 }
