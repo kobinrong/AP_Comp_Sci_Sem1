@@ -1,7 +1,8 @@
 public class Bill extends Money
 {
- 
+	private String name; 
 	private String face; 
+	private double value; 
 	
 	public Bill()
 	{
@@ -16,6 +17,10 @@ public class Bill extends Money
 		face = f;
 	}
 	
+	public String scan()
+	{
+		return face;
+	}
 	public String toString()
 	{
 		return "Face: " + face  + "\n" +
