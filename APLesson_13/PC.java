@@ -1,11 +1,11 @@
-public PC extends GameSystem
+public class PC extends GameSystem
 {
 	public PC()
 	{
 		super();
 	}
 	
-	public String PC(String platform)
+	public  PC(String platform)
 	{
 		super(platform);
 	}
@@ -18,7 +18,7 @@ public PC extends GameSystem
 	public String toString()
 	{
 		return "Platform: " + super.getPlatform() + "\"" +
-				"Serial Number :" + super.getSerialNumber() + "\"" +
+				"Serial Number :" + super.getSerialNo() + "\"" +
 				"System Input: " + systemInput() + "\""; 
 	}
 }

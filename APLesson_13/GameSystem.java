@@ -15,12 +15,12 @@ public class GameSystem
 		serialNo = 1 + (int)(Math.random()*9999999);
 	}
 	
-	public getPlatform()
+	public String getPlatform()
 	{
 		return platform;
 	}	
 	
-	public getSerialNo()
+	public int getSerialNo()
 	{
 		return serialNo; 
 	}

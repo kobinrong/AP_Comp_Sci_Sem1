@@ -5,9 +5,9 @@ public class PlayStation extends Console
 		super();
 	}
 	
-	public String PlayStation(String gsystem)
+	public PlayStation(String gsystem)
 	{
-		super(gysystem);
+		super(gsystem);
 	}
 	
 	public String getController()

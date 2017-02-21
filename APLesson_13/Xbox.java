@@ -12,7 +12,7 @@ public class Xbox extends Console
 	
 	public String getController()
 	{
-		return "XBox Wireless Controller"'
+		return "XBox Wireless Controller";
 	}
 	
 	public String getPlatform()
