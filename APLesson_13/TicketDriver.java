@@ -2,13 +2,12 @@ public class TicketDriver
 {
     public static void main(String[]args) 
 	{
-		Ticket Bob = new Advance(5);
-		Ticket Nutty = new StudentAdvance(5);
-        Ticket Ryan = new Walkup();
-
-        System.out.println(Bob);
-        System.out.println(Nutty);
-        System.out.println(Ryan);
+		Ticket Ty = new Advance(5);
+		Ticket Sam = new StudentAdvance(5);
+        Ticket Liza = new Walkup();
+        System.out.println(Ty);
+        System.out.println(Sam);
+        System.out.println(Liza);
 
 
     }
