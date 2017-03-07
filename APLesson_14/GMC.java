@@ -1,29 +1,30 @@
-public class GMC 
+public class GMC implements Location
 {
-	static double x; 
-	static double y; 
+	double x; 
+	double y; 
 	
-	public static void main(String[]args)
+	public GMC(double x, double y)
 	{
-		
-		public GMC()
-		{
-			x = a;
-			y = b;
-		}
-		public getID()
-		{
-			return 1 + (int)(Math.random() * 999999);
-		}
-		
-		public move(int x, int y)
-		{
-			
-		}
-		
-		public getLoc()
-		{
-			
-		}
+		this.x = x;
+		this.y = y;
 	}
+	public int getID()
+	{
+		return 1 + (int)(Math.random() * 999999);
+	}
+		
+	public void move(int x, int y)
+	{
+		this.x += x;
+		this.y += y;
+	}
+		
+	public double[] getLoc()
+	{
+		double[] loc = new double[2];
+		loc[0] = x;
+		loc[1] = y;
+		return loc;
+	}
+	
 }
