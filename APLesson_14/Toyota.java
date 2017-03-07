@@ -1,9 +1,8 @@
 public class Toyota implements Location
 {
-	double x; 
-	double y; 
+	private double location; 
 	
-	public Toyota(double x, double y)
+	public Toyota(String coordinates)
 	{
 		this.x = x;
 		this.y = y;
