@@ -1,12 +1,12 @@
 public class Honda implements Location 
 
-	double x; 
-	double y; 
+{
+	double x,y;
 	
-	public Honda(double location)
+	public Honda(double[] location)
 	{
-		this.x = x;
-		this.y = y;
+		this.x = location[0];
+		this.y = location[1];
 	}
 	public int getID()
 	{

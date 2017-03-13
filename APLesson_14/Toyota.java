@@ -1,11 +1,15 @@
+import java.util.*;
 public class Toyota implements Location
 {
-	private double location; 
+	private double x, y; 
+	
 	
 	public Toyota(String coordinates)
 	{
-		this.x = x;
-		this.y = y;
+		ArrayList<String> cord = new ArrayList<String>(Arrays.asList(coordinates.split(", ")));
+		x = Double.parseDouble(cord.get(0));
+		y = Double.parseDouble(cord.get(1));
+		
 	}
 	public int getID()
 	{
