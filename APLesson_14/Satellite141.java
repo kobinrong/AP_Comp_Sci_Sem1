@@ -19,7 +19,12 @@ public class Satellite141
 
        for (Location l : locate)
        {
-           printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
+          double xMove = Math.round(((Math.random()*100) + 1) * 100);
+		  double yMove = Math.round(((Math.random()*100) + 1) * 100);
+		  printout += "After" + l.getID() + "Moved from(" + getLocation(l.getLoc()) +")";
+		  ((Car)l).move(xMove, 2*yMove);
+		  printout += "\nNew Location (" + getLocation(l.getLoc()) + ")\n\n";
+		  
        }
 
 

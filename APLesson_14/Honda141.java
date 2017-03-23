@@ -1,30 +1,13 @@
-public class Honda141 implements Location141 
+public class Honda141 extends Car 
 
 {
 	double x,y;
 	
-	public Honda1(double[] location)
+	public Honda141(double x, double y)
 	{
-		this.x = location[0];
-		this.y = location[1];
+		super();
+		this.move (x[0],y[1]);
 	}
-	public int getID()
-	{
-		return 1 + (int)(Math.random() * 999999);
-	}
-		
-	public void move(int x, int y)
-	{
-		this.x += x;
-		this.y += y;
-	}
-		
-	public double[] getLoc()
-	{
-		double[] loc = new double[2];
-		loc[0] = x;
-		loc[1] = y;
-		return loc;
-	}
+
 	
 }

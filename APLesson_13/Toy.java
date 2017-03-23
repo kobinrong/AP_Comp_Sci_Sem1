@@ -42,7 +42,7 @@ public class Toy
 	
 	public String toString()
 	{
-		return "Name: " + name + "Count: " + count; 
+		return "Name: " + name + "\nCount: " + count; 
 	}
 	
 }
