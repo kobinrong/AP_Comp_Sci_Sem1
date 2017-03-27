@@ -1,4 +1,4 @@
-public class GMC141 
+public class GMC141 extends Car 
 {
 	double x; 
 	double y; 

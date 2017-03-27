@@ -1,12 +1,12 @@
 public class Honda141 extends Car 
 
 {
-	double x,y;
 	
-	public Honda141(double x, double y)
+	
+	public Honda141(double [] coordinates)
 	{
 		super();
-		this.move (x[0],y[1]);
+		this.move (coordinates[0],coordinates[1]);
 	}
 
 	
