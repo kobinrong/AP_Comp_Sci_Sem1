@@ -3,15 +3,25 @@ public class ToyStore
 {
 	static ArrayList<Toy> toylist = new ArrayList<Toy>();
 	
-	public static void loadToys(String t)
+	public ToyStore()
+	{
+		toylist = new ArrayList<>();
+	}
+	
+	public ToyStore(String toy)
+	{
+		loadToys(toy);
+	}
+	
+	public  void loadToys(String toy)
 	{
 		
-		ArrayList<String>toys= new ArrayList<String> (Arrays.asList(t.split(", ")));
+		ArrayList<String>toys= new ArrayList<String> (Arrays.asList(toy.split(", ")));
 		for(int i = 0; i < toys.size(); i +=2)
 		{
 			String name = toys.get(i);
 			String type = toys.get(i +1);
-			
+			Toy t = getThatToy(name);
 			
 			if(getThatToy(name) == null)
 			{
@@ -28,8 +38,8 @@ public class ToyStore
 			}
 			else
 			{
-				Toy ty = getThatToy(name);
-				ty.setCount((ty.getCount())+1);
+				
+				t.setCount((t.getCount())+1);
 			}
 		}	
 	}
@@ -66,6 +76,7 @@ public class ToyStore
 	{
 		int cars = 0;
 		int figures = 0;
+		int max = Integer.MIN_VALUE;
 		for(Toy toy : toylist)
 		{
 			if(max < toy.getCount())
@@ -95,9 +106,9 @@ public class ToyStore
 		}
 	}
 
-	public static void toString()
+	public String toString()
 	{
-		return toylist ;
+		return " " + toylist ;
 	}
 	
 }
