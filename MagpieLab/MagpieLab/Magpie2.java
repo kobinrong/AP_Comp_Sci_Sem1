@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Magpie2
 {
 	/** Get a default greeting @return a greeting*/
@@ -69,7 +69,12 @@ public class Magpie2
 	/** Ex_02: The findKeyword() Method...
 	 * ========================================================= */
 	private int findKeyword(String statement, String goal, int startPos)
-	{
+	{			
+				
+				
+				String phrase = statement.trim();
+				int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
+				
 		/* New String variable phrase = a more searchable version of statement.
 		 	-Use a combination of trim() and toLowerCase() modify statement.
 
@@ -86,25 +91,37 @@ public class Magpie2
 					set before = the slot in phrase before psn */
 
 				//====>code here
-				int psn = phrase.indexof("goal", 1);
-				(while 
-				/*check if you can fit goal into the rest of phrase - no need to
-				proceed otherwise
-					set after = the slot in phrase after psn + length of goal */
+				while (psn >= 0)
+				{
+					String before = " "; after = " ";
+				}
+				if(psn > 0)
+				{
+					before = phrase.substring(psn-1, psn).toLowerCase();
+				}	
+				/*check if yowise
+					set afteru can fit goal into the rest of phrase - no need to
+				proceed other = the slot in phrase after psn + length of goal */
 
 				//=====> code here
-
+				if (psn + goal.length() < phrase.length())
+				{
+					after = phrase.substring(psn + goal.length(), psn + goal.length() + 1).toLowerCase();
+				}
 				/* if before and after are not letters (compare before to "a"
 					and after to "z")
 						--return psn
-
+					
 				Otherwise, search for goal in phrase from psn + 1 forward */
-		
-		
-		return -1;
+				if (((before.compareTo ("a") < 0 ) || (before.compareTo("z") > 0))&&((after.compareTo ("a") < 0 ) || (after.compareTo("z") > 0)))
+				{
+					return psn;
+				}
 
-	}
-
+				psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+			}
+				return 1;
+}
 	/** Override - this method is used if there are only 2 parameters...*/
 	private int findKeyword(String statement, String goal)
 	{
