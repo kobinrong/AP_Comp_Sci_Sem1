@@ -1,5 +1,5 @@
-import java.util.Scanner;
-public class Magpie2
+
+public class MagpiePt2
 {
 	/** Get a default greeting @return a greeting*/
 	public String getGreeting()
@@ -49,37 +49,137 @@ public class Magpie2
 			response = "Tell me more about your family.";
 		}
 
-		/** Exercise_03(Final)
-		 * ==================================================
-		 * Create additional code (another else if) that
-		 * responds "Tell me more about your pet" if the
-		 * user mentions the word cat, dog, fish, or turtle
-		 * in their statement.
-		 *
-		 * Create addtional code (another else if) that
-		 * responds "He sounds like a pretty dank teacher"
-		 * if you mention "Robinette" in your statement */
-		
-		else if (statement.indexOf("cat") >= 0
-				|| statement.indexOf("dog") >= 0
-				|| statement.indexOf("fish") >= 0
-				|| statement.indexOf("turtle") >= 0)
+	else if (findKeyword(statement, "I want to", 0) >= 0)
+	{
+		response = transformIWantToStatement(statement);
+	}
+	else if (findKeyword(statement, "I want", 0) >= 0)
 		{
-			response = "Tell me more about your pet.";
+			response = transformIWantStatement(statement);
 		}
-		else if (statement.indexOf("Robinette") >= 0)
+
+	
+	else 
+	{
+		// Look for a two word (you <something> me)
+		// pattern
+		int psn = findKeyword(statement, "you", 0);
+
+
+		if (psn >= 0
+			&& findKeyword(statement, "me", psn) >= 0)
 		{
-			response = "He sounds like a pretty dank teaacher";
+			response = transformYouMeStatement(statement);
 		}
+		else
+	{
+				//  Part of student solution
+				// Look for a two word (I <something> you)
+				// pattern
+				psn = findKeyword(statement, "i", 0);
+
+				if (psn >= 0
+						&& findKeyword(statement, "you", psn) >= 0)
+				{
+					response = transformIYouStatement(statement);
+				}
 		else
 		{
 			response = getRandomResponse();
 		}
-		return response;
+	 }
 	}
+	return response; 
+}
 
-	/** Ex_02: The findKeyword() Method...
-	 * ========================================================= */
+/**
+* Take a statement with "I want to <something>." and transform it into
+* "What would it mean to <something>?"
+* @param statement the user statement, assumed to contain "I want to"
+* @return the transformed statement
+*/
+private String transformIWantToStatement(String statement)
+{
+	
+  /**
+   * trim the statement
+   * variable lastChar = last character in statement
+   * if lastChar is a period...
+   *        remove the last character from statement
+   *
+   * Set new int psn to the result from...
+   *        findKeyword() method @param statement, goal is "I want to "
+   * Set new String restOfStatement to the rest of statement after the
+   * "I want to ".
+   * /
+   * return "What would it mean to" + restOfStatement; **/
+   statement = statement.trim();		
+   string lastChar = statement.substring(statement.length() - 1);
+   if(lastChar = ".")
+   {
+	   statement.substring(0, statement.length()-1);
+	   //what I originally put: statement = statement.substring(statement.length) - lastChar;
+   } 
+   int psn = findKeyword(goal, "I want to", 0);
+   String restOfStatement = statement.substring(psn + 9).trim();
+		return "What would it mean to " + restOfStatement + "?";
+}
+
+
+/**
+* Take a statement with "you <something> me" and transform it into
+* "What makes you think that I <something> you?"
+* @param statement the user statement, assumed to contain "you" followed by "me"
+* @return the transformed statement
+*/
+private String transformYouMeStatement(String statement)
+{
+  /**
+   * trim the statement
+   * Set new String lastChar to the last character in statement
+   * if lastChar is a period...
+   *        remove the period
+   *
+   * Set new int psnOfYou to the result of findKeyword
+   *        @param statement and "you"
+   * Set new int psnOfMe to the result of findKeyword
+   *      @param statement, "me", and psnOfYou + 3
+   * Set new String restOfStatement to the rest of statement after "You" + 3,
+   * and before "me".
+   *
+   * return "What makes you think that I " + restOfStatement + "you?"
+   * */
+   statement = statement.trim();		
+   String lastChar = statement.substring(statement.length() - 1);
+   
+   if(lastChar.equals("."))
+   {
+	   statement = statement.substring(statement.length()- 1);
+   } //statement.substring(0, statement.length()-1)
+   
+   int psnOfYou = findKeyword(statement, "you", 0);
+   int psnOfMe = findKeyword(statement, "me", psnOfYou + 3);
+   String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
+	return "What makes you think that I " + restOfStatement + "you?"; 
+}
+
+private String transformIYouStatement(String statement)
+{
+	statement = statement.trim();		
+   String lastChar = statement.substring(statement.length() - 1);
+   
+   if(lastChar.equals("."))
+   {
+	   statement.substring(0, statement.length()-1);
+   } 
+   
+   int psnOfYou = findKeyword(statement, "you", 0);
+   int psnOfI = findKeyword(statement, "I", psnOfI);
+   String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
+	return "Why do you " + restOfStatement + "me?"; 
+}
+
+	
 	private int findKeyword(String statement, String goal, int startPos)
 	{			
 				//redundantly recalled startPos as int 
@@ -87,22 +187,7 @@ public class Magpie2
 				String phrase = statement.trim();
 				int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
 				
-		/* New String variable phrase = a more searchable version of statement.
-		 	-Use a combination of trim() and toLowerCase() modify statement.
-
-		   New int variable psn = the location of goal in phrase after
-		   startPos
-		   
-			-->Refinement: Make sure we find goal by itself, and not part
-			of another word ("no" vs no in "know"). if you find an occurrence
-			of goal, make sure before and after aren't letters.
-
-			As long as psn >= 0...
-				Check if psn > 0 - there is no need to check for before at the
-				beginning of the word
-					set before = the slot in phrase before psn */
-
-				//====>code here
+		
 				while (psn >= 0)
 				{
 					String before = " ";

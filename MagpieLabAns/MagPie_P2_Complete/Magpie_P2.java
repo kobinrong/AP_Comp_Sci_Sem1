@@ -1,17 +1,4 @@
-package Part_2.Complete;
-/**
- * The completed version of the Magpie activity 4.
- *A program to carry on conversations with a human user.
- * This version:
- *<ul><li>
- * 		Uses advanced search for keywords 
- *</li><li>
- * 		Will transform statements as well as react to keywords
- *</li></ul>
- * @author Laurie White
- * @version April 2012
- *
- */
+
 public class Magpie_P2
 {
 	/**

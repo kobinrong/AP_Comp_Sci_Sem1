@@ -1,4 +1,3 @@
-package Part_2.Complete;
 
 import java.util.Scanner;
 
