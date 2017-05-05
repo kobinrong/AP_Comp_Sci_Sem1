@@ -55,7 +55,7 @@ public class MagpiePt2
 	}
 	else if (findKeyword(statement, "I want", 0) >= 0)
 		{
-			response = transformIWantStatement(statement);
+			response = transformIWantToStatement(statement);
 		}
 
 	
@@ -114,13 +114,14 @@ private String transformIWantToStatement(String statement)
    * /
    * return "What would it mean to" + restOfStatement; **/
    statement = statement.trim();		
-   string lastChar = statement.substring(statement.length() - 1);
-   if(lastChar = ".")
+   String lastChar = statement.substring(statement.length() - 1);
+   if(lastChar.equals("."))
    {
 	   statement.substring(0, statement.length()-1);
 	   //what I originally put: statement = statement.substring(statement.length) - lastChar;
    } 
-   int psn = findKeyword(goal, "I want to", 0);
+   
+   int psn = findKeyword(statement, "I want to", 0);
    String restOfStatement = statement.substring(psn + 9).trim();
 		return "What would it mean to " + restOfStatement + "?";
 }
@@ -172,9 +173,9 @@ private String transformIYouStatement(String statement)
    {
 	   statement.substring(0, statement.length()-1);
    } 
-   
-   int psnOfYou = findKeyword(statement, "you", 0);
-   int psnOfI = findKeyword(statement, "I", psnOfI);
+     int psnOfI = findKeyword (statement, "I", 0);
+   int psnOfYou = findKeyword (statement, "you", psnOfI);
+ 
    String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
 	return "Why do you " + restOfStatement + "me?"; 
 }

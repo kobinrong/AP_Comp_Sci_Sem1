@@ -67,7 +67,7 @@ public class Magpie2
 		{
 			response = "Tell me more about your pet.";
 		}
-		else if (statement.indexOf("Robinette") >= 0)
+		else if (statement.indexOf("robinette") >= 0)
 		{
 			response = "He sounds like a pretty dank teaacher";
 		}
