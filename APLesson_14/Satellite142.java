@@ -26,7 +26,7 @@ public class Satellite142
           double xMove = Math.round(((Math.random()*100) + 1) * 100);
 		  double yMove = Math.round(((Math.random()*100) + 1) * 100);
 		  printout += "\nAfter " + l.getID() + " Moved (" + xMove + "," + yMove +")";
-		  (l).move(xMove, 2*yMove);
+		  l.move(xMove, 2*yMove);
 		  printout += "\nNew Location (" + getLocation(l.getLoc()) + ")\n\n";
 		  
        }
