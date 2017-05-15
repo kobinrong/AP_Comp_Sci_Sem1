@@ -18,13 +18,15 @@ public class SimplePicture implements DigitalPicture
 {
   
   /////////////////////// Fields /////////////////////////
-  
+
+ 
   /**
    * the file name associated with the simple picture
    */
   private String fileName;
   
   /**
+   * the title of the simple picture
    * the title of the simple picture
    */
   private String title;

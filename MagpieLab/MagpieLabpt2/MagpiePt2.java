@@ -1,4 +1,3 @@
-
 public class MagpiePt2
 {
 	/** Get a default greeting @return a greeting*/
@@ -47,6 +46,10 @@ public class MagpiePt2
 				|| statement.indexOf("brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+				else if (statement.indexOf("robinette") >= 0)
+		{
+			response = "He sounds like a pretty dank teaacher";
 		}
 
 	else if (findKeyword(statement, "I want to", 0) >= 0)
@@ -177,7 +180,7 @@ private String transformIYouStatement(String statement)
    int psnOfYou = findKeyword (statement, "you", psnOfI);
  
    String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
-	return "Why do you " + restOfStatement + "me?"; 
+	return "Why do you " + restOfStatement + " me?"; 
 }
 
 	
