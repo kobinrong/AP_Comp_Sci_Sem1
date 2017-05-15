@@ -47,6 +47,11 @@ public class Battleship
 		System.out.println("You died!!");
 	}
 	
+	public LoadOppShips()
+	{
+		int [] OppShips = 
+	}
+	
 	public static String takeDamage(int damage, int amount)
 	{
 		if(damage == 1)
