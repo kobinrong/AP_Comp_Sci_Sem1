@@ -3,8 +3,8 @@ public class Battleship
 {
 	int [] OurShips = new int[15];
 	int [] OppShips = new int[15];
-	static int healthload = 6;
-	static int healthCount;
+	static int OurHealth = 15;
+	static int OppHealth = 15;
 	
 	public static void main(String[]args)
 	{
@@ -25,26 +25,22 @@ public class Battleship
 		LoadOppShips();
 		
 		System.out.println("Enter the location for your first shot");
-		int firstshot = kb.next();
+		int OurShot = kb.next();
 		
 		for(int i = 0; i < OppShips.length; i++)
 		{
-			if(
+			if(OurShot = OppShips[i])
+			{
+				OppHealth -= 1;
+				System.out.println("Darn you got me.") 
+			}
+			else
+			{
+				System.out.println("Missed!")
+			}	
 		}	
 	
 		
-		
-		
-		while(turn != "Q" && healthCount > 0)
-		{
-			System.out.println("Your turn! Hit ENTER when ready: ");
-			turn = kb.nextLine();
-			damage = 1 +(int)(Math.random() * 2);
-			amount = 1 + (int)(Math.random() * 6);
-			System.out.println(takeDamage(damage, amount));
-			printClip();
-		}
-		System.out.println("You died!!");
 	}
 	
 	public LoadOppShips()

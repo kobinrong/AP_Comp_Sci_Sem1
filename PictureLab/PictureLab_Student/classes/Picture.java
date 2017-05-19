@@ -118,7 +118,7 @@ public class Picture extends SimplePicture
 		{
 			for (Pixel pixelObj : rowArray)
 			{
-				pixelObj.setRedpixelObj.getReD() - 255);
+				pixelObj.setRed(pixelObj.getRed() - 255);
 				pixelObj.setGreen(pixelObj.getGreen() - 255);
 				pixelObj.setBlue(pixelObj.getBlue() - 255);
 			}
@@ -384,33 +384,26 @@ public class Picture extends SimplePicture
   
   public void copy2(Picture fromPic, int startRow, int endRow, int startCol, int endCol)
   {
-    Pixel fromPixel = null;
-    Pixel toPixel = null;
-    Pixel[][] toPixels = this.getPixels2D();
-    Pixel[][] fromPixels = fromPic.getPixels2D();
-    for (int fromRow = 0, toRow = startRow; 
-         fromRow < fromPixels.length &&
-         toRow < endRow;
-         fromRow++, toRow++)
-    {
-      for (int fromCol = 0, toCol = startCol; 
-           fromCol < fromPixels[0].length &&
-           toCol < endCol;  
-           fromCol++, toCol++)
-      {
-        fromPixel = fromPixels[fromRow][fromCol];
-        toPixel = toPixels[toRow][toCol];
-        toPixel.setColor(fromPixel.getColor());
-        //System.out.println("Fromrow " + fromRow + " toRow " + toRow + " fromCol" + fromCol + " toCol " + toCol);
-        //System.out.println(fromPixels[0].length);
-      }
-    } 
+		Pixel fromPixel = null;
+		Pixel toPixel = null;
+		Pixel[][] toPixels = this.getPixels2D();
+		Pixel[][] fromPixels = fromPic.getPixels2D();
+		for (int fromRow = 0, toRow = startRow; fromRow < fromPixels.length && toRow < endRow;fromRow++, toRow++)
+		{
+			for (int fromCol = 0, toCol = startCol; fromCol < fromPixels[0].length && toCol < endCol;fromCol++, toCol++)
+			{
+				fromPixel = fromPixels[fromRow][fromCol];
+				toPixel = toPixels[toRow][toCol];
+				toPixel.setColor(fromPixel.getColor());
+
+			}
+		} 
   }
 
 public void MyCollage()
 {
 		Picture flower1 = new Picture("flower1.jpg");
-		Picture flower2 = new Picture)"flower2.jpg");
+		Picture flower2 = new Picture("flower2.jpg");
 		this.copy(flower1,0,1);
 		this.copy(flower1,90,0);
 		this.copy(flower2,75,75);
