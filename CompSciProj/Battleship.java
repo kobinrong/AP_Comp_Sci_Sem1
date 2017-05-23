@@ -55,6 +55,10 @@ public class Battleship
 			--OurHealth;
 			return FirstShot + " goes down!";
 		}
+		if(int [] OurShips = 0)
+		{
+			return "Game over! Good game!";
+		}
 		
 	}
 	
@@ -64,6 +68,11 @@ public class Battleship
 		{
 			--OppHealth;
 			return FirstShot + " goes down!";
+		}
+		
+		if(int [] OppShips = 0)
+		{
+			return "Game over! You got me; good game!";
 		}
 	}
 	
