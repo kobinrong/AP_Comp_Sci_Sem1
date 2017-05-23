@@ -12,7 +12,7 @@ public class Battleship
 		String turn = "";
 		int damage = 0;
 		int amount = 0;
-		healthCount = 6;
+		healthCount = 30;
 		health = new String[healthload];
 		
 		System.out.println("Enter your ships' coordinates");
@@ -24,7 +24,7 @@ public class Battleship
 		
 		LoadOppShips();
 		
-		System.out.println("Enter the location for your first shot");
+		System.out.println("Enter the location for your shot");
 		int OurShot = kb.next();
 		
 		for(int i = 0; i < OppShips.length; i++)
@@ -45,49 +45,29 @@ public class Battleship
 	
 	public LoadOppShips()
 	{
-		int [] OppShips = 
+		int [] OppShips = (int)(Math.random() * 100) + 1;
 	}
 	
-	public static String takeDamage(int damage, int amount)
+	public static String WeTakeDamage(int damage, int OurHealth)
 	{
 		if(damage == 1)
 		{
-			healthCount -= amount;
-			return "Taking " + amount + " damage!";
+			--OurHealth;
+			return FirstShot + " goes down!";
 		}
-		else
-		{
-			if(healthCount + amount < healthload)
-			{
-				healthCount += amount;
-			}
-			else
-			{
-				healthCount = healthload;
-			}
-			
-		}
-		return "Power up " + amount;
+		
 	}
 	
-	public static void printClip()
+	public static String OppTakesDamage(int damage, int OppHealth)
 	{
-		String output = "Health:\t";
-		
-		for(int i = 0; i <healthload; i++) 
+		if(damage == 1)
 		{
-			if(i < healthCount)
-			{
-				
-				health[i] = " @ "; 
-			}			
-			else
-			{
-				health[i] = " [] "; 
-				
-			}	
-			output += health[i];
+			--OppHealth;
+			return FirstShot + " goes down!";
 		}
-		System.out.println(output);
 	}
+	
+	
+	
+	
 }
