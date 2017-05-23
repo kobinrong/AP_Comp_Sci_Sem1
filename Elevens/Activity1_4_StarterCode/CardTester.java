@@ -13,8 +13,8 @@ public class CardTester {
 		Card cardtwo = new Card("four", "clubs", 10);
 		Card cardtres = new Card("king", "jacks", 7);
 		
-		System.out.println(cardone);
-		System.out.println(cardtwo);
-		System.out.println(cardtres);
+		System.out.println(card1);
+		System.out.println(card2);
+		System.out.println(card3);
 	}
 }
