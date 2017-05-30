@@ -402,19 +402,39 @@ public class Picture extends SimplePicture
 
 public void MyCollage()
 {
-		Picture flower1 = new Picture("flower1.jpg");
-		Picture flower2 = new Picture("flower2.jpg");
-		this.copy(flower1,0,1);
-		this.copy(flower1,90,0);
-		this.copy(flower2,75,75);
-		Picture flowerNoColor = new Picture(flower1);
-		flowerNoColor.negate();
-		this.mirrorDiagonal();
-		Picture flowerNoBlue = new Picture(flower2);
-		flowerNoBlue.zeroBlue();
-		Picture flowerGray = new Picture(flower1);
-		flowerGray.grayscale();
-		this.write("collage.jpg");
+	    
+  
+    Picture flower1 = new Picture("seagull.jpg");
+    Picture robot = new Picture("robot.jpg");
+	Picture flower3 = new Picture("beach.jpg");
+    this.copy(flower1,0,0);
+    this.copy(robot,100,0);
+    this.copy(flower3,200,0);
+    Picture flowerNoBlue = new Picture(flower1);
+	this.KeepOnlyBlue();
+    this.copy(flower3,300,0);
+    this.copy(flower1,400,0);
+    this.copy(robot,500,0);
+    this.mirrorHorizontal();
+    this.write("collage.jpg");
+  
+		//Picture ex = new Picture("example.jpg");
+		//Picture flower1 = new Picture("flower1.jpg");
+		//Picture flower2 = new Picture("flower2.jpg");
+		//Picture robot =  new Picture("robot.jpg");
+		//this.copy(flower1,0,1);
+		//this.copy(flower1,90,0);
+		//this.copy(robot,75,75);
+		//Picture flowerNoColor = new Picture(flower1);
+		//flowerNoColor.negate();
+		//this.mirrorDiagonal();
+		//this.mirrorHorizontalBotToTop();
+		//Picture flowerNoBlue = new Picture(flower2);
+		//flowerNoBlue.zeroBlue();
+		//Picture flowerGray = new Picture(flower1);
+		//flowerGray.grayscale();
+		//this.write("collage.jpg");
+
 }
 
 
@@ -457,7 +477,7 @@ public void MyCollage()
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
-    //beach.zeroBlue();
+    beach.zeroBlue();
     beach.explore();
 	beach.KeepOnlyBlue();
 	

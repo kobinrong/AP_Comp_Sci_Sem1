@@ -127,7 +127,13 @@ public class PictureTester
   //add testmyCollage() and testCopy(); same as above ^
   //EdgeDetection2 tester
   
-  
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.explore();
+    canvas.MyCollage();
+    canvas.explore();
+  }
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
@@ -158,8 +164,8 @@ public class PictureTester
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    testEdgeDetection();
-    //testEdgeDetection2();
+    //testEdgeDetection();
+    testMyCollage();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
