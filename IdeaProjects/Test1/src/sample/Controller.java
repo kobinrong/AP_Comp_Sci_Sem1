@@ -7,9 +7,9 @@ import javafx.stage.*;
 public class Controller {
 
     //Create variable
-    static boolean answer;
+    static String answer;
 
-    public static boolean display(String title, String message) {
+    public static String display(String title, String message) {
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(title);
@@ -23,11 +23,11 @@ public class Controller {
 
         //Clicking will set answer and close window
         yesButton.setOnAction(e -> {
-            answer = true;
+            answer = "You got em";
             window.close();
         });
         noButton.setOnAction(e -> {
-            answer = false;
+            answer = "Missed";
             window.close();
         });
 

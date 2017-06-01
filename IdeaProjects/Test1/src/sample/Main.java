@@ -18,11 +18,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         window = primaryStage;
         window.setTitle("Let's play: Battleship");
-        Label title =
+
         button = new Button("Click Me");
 
         button.setOnAction(e -> {
-            boolean result = Controller.display("Let's play: Battleship", "Is this your final answer?");
+            String result = Controller.display("Let's play: Battleship", "Is this your final answer?");
             System.out.println(result);
         });
 
@@ -35,7 +35,7 @@ public class Main extends Application {
 
     public void handle(ActionEvent event){
         if(event.getSource() == button)
-            System.out.println("")
+            System.out.println("You got em" );
 
     }
 
