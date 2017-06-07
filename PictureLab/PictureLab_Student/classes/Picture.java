@@ -450,7 +450,40 @@ public void MyCollage()
 				
 			}
 		}
-}
+	}
+	
+	public void edgeDetection2(int edgeDist)
+	{
+		Pixel leftPixel = null;
+		Pixel topPixel =null;
+		Pixel bottomPixel =null;
+		Pixel rightPixel = null;
+		Color bottomColor=null;
+		Pixel[][] pixels = this.getPixels2D();
+		Color rightColor = null;
+		for (int row = 0; row < pixels.length; row++)
+		{
+			for (int col = 0; col < pixels[0].length-1; col++)
+			{
+				bottomPixel = pixels[row][col];
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][col+1];
+				rightColor = rightPixel.getColor();
+				bottomColor = bottomPixel.getColor();
+			if (leftPixel.colorDistance(rightColor) > edgeDist)
+			{
+				leftPixel.setColor(Color.BLACK);
+			}
+			else if (leftPixel.colorDistance(bottomColor) > edgeDist)
+			{
+				leftPixel.setColor(Color.BLACK);
+			}
+         
+			else
+				leftPixel.setColor(Color.WHITE);
+      }
+    }
+  }
   
   
   /* Main method for testing - each class in Java can have a main 
