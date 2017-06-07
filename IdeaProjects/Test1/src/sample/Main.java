@@ -19,6 +19,7 @@ public class Main extends Application {
         window = primaryStage;
         window.setTitle("Let's play: Battleship");
 
+
         button = new Button("Click Me");
 
         button.setOnAction(e -> {

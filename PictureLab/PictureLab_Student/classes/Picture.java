@@ -417,23 +417,6 @@ public void MyCollage()
     this.copy(robot,500,0);
     this.mirrorHorizontal();
     this.write("collage.jpg");
-  
-		//Picture ex = new Picture("example.jpg");
-		//Picture flower1 = new Picture("flower1.jpg");
-		//Picture flower2 = new Picture("flower2.jpg");
-		//Picture robot =  new Picture("robot.jpg");
-		//this.copy(flower1,0,1);
-		//this.copy(flower1,90,0);
-		//this.copy(robot,75,75);
-		//Picture flowerNoColor = new Picture(flower1);
-		//flowerNoColor.negate();
-		//this.mirrorDiagonal();
-		//this.mirrorHorizontalBotToTop();
-		//Picture flowerNoBlue = new Picture(flower2);
-		//flowerNoBlue.zeroBlue();
-		//Picture flowerGray = new Picture(flower1);
-		//flowerGray.grayscale();
-		//this.write("collage.jpg");
 
 }
 
